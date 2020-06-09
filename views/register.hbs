@@ -1,0 +1,28 @@
+<br>
+<br>
+<div class="container my-auto">
+            <div class="col-lg text-center">
+                <h2 class="text-uppercase boxed mx-auto"> R E G I S T E R &nbsp; F O R &nbsp; A N &nbsp; A C C O U N T &nbsp;</h2>
+                <img src = "/img/log.png" height = "100" width = "100" alt = "cute">
+                <br>
+            </div>
+    <div class="col-lg-4">
+
+        <form method="POST" action="/register">
+            <div class="form-group">
+                <label for="usernameInput">Username: </label>
+                <input name="username" type="text" class="Username" id="usernameInput" placeholder="Username">
+
+                
+                <label for="passwordInput">Password: </label>
+                <input name="password" type="password" class="form-control" id="passwordInput" placeholder="Password">
+            <br>
+            <button style = "background-color: #FF6699" type="submit" class="btn btn-md btn-primary">Register</button>
+            <br> 
+            <b style = "color: purple">{{error}}</b>
+            <br>
+            <p>Don't have an account? <a href="/login">Login</a></p> 
+        </form>
+        </div>
+    </div>
+</div>

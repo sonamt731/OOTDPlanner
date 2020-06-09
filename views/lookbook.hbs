@@ -1,0 +1,72 @@
+<br>
+<br>
+    <!--main info header-->
+    <header class="d-flex p-2">
+    <div class="overlay"></div>
+    	<div class="container my-auto">
+        	<div class="col-lg text-center">
+            	<h2 class="text-uppercase boxed mx-auto"> L o o k &nbsp; B o o k &nbsp; C e n t r a l &nbsp;</h2>
+                <br>
+                <br>
+
+        	</div>
+
+
+{{#each looks as |looks|}}          
+    <div class = "row">
+    
+    <!-- column 1 -->
+        <div class="col-md">
+        <div class = "container2">
+           	<img src = "{{looks.link}}" height = "340px" width = "250px">
+           	<div class = "overlay">
+                <div class = "text">{{looks.date}}</div>
+            </div> 
+        </div>
+        </div>
+    
+    <!-- column 2 -->
+    	<div class="col-md">
+        <ul>
+			<li>{{looks.topBottom}}</li>
+			<li>{{looks.shoes}}</li>
+			<li>{{looks.accessories}}</li>
+			<li>{{looks.season}}</li>
+			<li>{{looks.date}}</li>
+            <img src={{looks.img}} height = "100" width = "200">
+		</ul>
+      	</div>
+    </div>
+    <br>
+{{/each}}
+            
+    	</div>
+    </div>
+    </header>
+
+<div class="col-lg text-center">
+    <h2 class="text-uppercase boxed mx-auto"> F i l t e r &nbsp; B y &nbsp; S e a s o n &nbsp;</h2>
+    <br>
+</div>
+<br>
+
+<div class = "container my-auto">
+    <div class="row">
+        <div class="col-lg mx-auto text-center">
+    
+<form action = "/" method = "GET">
+Season: <input list = "season" name = "season">
+	<datalist id = "season">
+		<option value = "Summer">
+		<option value = "Fall">
+		<option value = "Winter">
+		<option value = "Spring">
+	</datalist>
+<input style = "background-color: #FF6699" type="submit" class="btn btn-secondary">
+</form>
+<br>
+</div>
+</div>
+</div>
+
+

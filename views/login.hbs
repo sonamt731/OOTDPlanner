@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  
+</head> 
+<body> 
+
+<br>
+<br>
+<div class="container my-auto">
+  <div class="col-lg text-center">
+    <h2 class="text-uppercase boxed mx-auto"> &nbsp; L O G I N &nbsp;</h2>
+    <img src = "/img/log.png" height = "100" width = "100" alt = "cute">
+    <br>
+  </div>
+
+  <div class="col-lg-4">
+  <form class="form-signin" action="/login" method="post"> 
+    <div class="form-group">
+    <label for="username" class="sr-only">Username: </label> 
+    Username: <input type="text" id="username" name="username" class="form-
+    control" placeholder="Username" required=""> 
+    <br>
+    <label for="password" class="sr-only">Password: </label> 
+    Password: <input type="password" id="password" name="password"
+     class="form-control" placeholder="Password" required=""> 
+    <br>
+    <button style = "background-color: #FF6699" class="btn btn-md btn-primary" 
+       type="submit">Login</button> 
+    <br> 
+    <b style = "color: purple">{{error}}</b>
+    <br>
+    <p>Don't have an account? <a href="/register">Register</a></p> 
+  </form> 
+  </div>
+</div> 
+
+
+</body> 
+</html> 

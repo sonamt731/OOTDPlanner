@@ -1,0 +1,73 @@
+<br>
+<br>
+<div class = "container my-auto">
+<div class="col-lg">
+	<h2 class="text-uppercase boxed mx-auto"> W e a t h e r &nbsp; </h2>
+	<br>
+	<h5>Pulled from OpenWeather API</h5>
+	<br>
+</div>
+<form action = "/planner" method = "GET">
+Zip Code: <input type= "text" name = "zipcode">
+<input style = "background-color: #FF6699" type = "submit" class = "btn btn-secondary" value = "Get Weather">
+</form>
+
+<br>
+
+{{#if filled}}
+<div class = "row">
+    	<div class="col-lg mx-auto">
+    	<h5> Current Weather </h5>
+        <ul>
+			<li>Temperature: {{weather.mainTemp}}°F</li>
+			<li>Feels Like: {{weather.feelsLike}}°F</li>
+			<li>Low of: {{weather.minTemp}}°F</li>
+			<li>High of: {{weather.maxTemp}}°F</li>
+			<li>Mainly: {{weather.mainWeath}}</li>
+			<li>Specifically: {{weather.moreDetailed}}</li>
+			<br>
+			<img src = {{weather.img}} height = "200" width = "150">
+		</ul>
+      	</div>
+ {{/if}}
+<div class="col-lg mx-auto text-right">
+<img src="/img/weather.gif" height="150" width="200" alt= "logo"><br>
+</div>
+</div>
+</div>
+
+
+<br>
+<br>
+<div class = "container my-auto">
+    <div class="row">
+        <div class="col-lg mx-auto ">
+<div class = "container my-auto">
+<div class="col-lg">
+            	<h2 class="text-uppercase boxed mx-auto"> L e t ' s &nbsp; P l a n &nbsp; </h2>
+            	<br>
+</div> 
+<form method = "POST" action = "/planner">
+	Occasion: <input list = "occasion" name = "occasion">
+	<datalist id = "occasion">
+		<option value = "Anniversary">
+		<option value = "Birthday">
+		<option value = "Business">
+		<option value = "Cultural">
+		<option value = "Dinner">
+		<option value = "New Years Eve">
+		<option value = "Outdoor Event">
+		<option value = "Party">
+		<option value = "Wedding">
+		<option value = "Other">
+	</datalist>
+	<br><br>
+	Outfit: <br>
+	<textarea rows = "5" cols = "50" name = "outfit"></textarea><br>
+	<input style = "background-color: #FF6699" type="submit" class="btn btn-secondary" value = "Add my Plan">
+	<br>
+	<br>
+	<br>
+</form>
+
+</div>
